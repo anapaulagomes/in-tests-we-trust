@@ -2,7 +2,6 @@ from detector.genderapi import GenderDetector
 from detector.genderapi import EmptyName
 import mock
 import pytest
-import requests
 
 
 @mock.patch('detector.genderapi.requests.get')
