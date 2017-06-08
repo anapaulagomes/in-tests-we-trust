@@ -1,0 +1,9 @@
+.cache
+**.DS_Store
+bin/
+dist/
+build/
+wheelhouse/
+*.egg-info/
+*.py[co]
+__pycache__/
