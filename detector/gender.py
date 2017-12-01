@@ -1,6 +1,8 @@
 import requests
 
 
+GENDERIZE_ENDPOINT = 'https://api.genderize.io/?name={}'
+
 class EmptyName(Exception):
     pass
 
@@ -19,7 +21,7 @@ def find_by(name):
     return data
 
 def _search_on_api(name):
-    return requests.get('https://api.genderize.io/?name={}'.format(name)).json()
+    return requests.get(GENDERIZE_ENDPOINT.format(name)).json()
 
 def _extract_first_name(name):
     return name.split(' ')[0]
